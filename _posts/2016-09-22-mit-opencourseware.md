@@ -1,9 +1,16 @@
+---
+layout: post
+title: MIT Open Courseware
+author: countdigi
+tags: [ 'compsci' ]
+---
+
 # MIT Open Courseware
 
 ## Overview
 
 For many years the Massachusetts Institute of Technology has offered
-[MITOpenCourseWare](https://ocw.mit.edu/) with thousands of lectures freely available online.
+[MIT Open Courseware](https://ocw.mit.edu/) with thousands of lectures freely available online.
 In tribute here is a transcript of the opening part of a 1986 MIT Lecture for Hewlett Packard engineers
 based on this ["spell-casting tome"](https://mitpress.mit.edu/books/structure-and-interpretation-computer-programs).
 
