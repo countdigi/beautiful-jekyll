@@ -4,12 +4,12 @@
 
 For many years the Massachusetts Institute of Technology has offered
 [MITOpenCourseWare](https://ocw.mit.edu/) with thousands of lectures freely available online.
-In tribute here is a transcript of the opening of a 1986 MIT Lecture for Hewlett Packard engineers
+In tribute here is a transcript of the opening part of a 1986 MIT Lecture for Hewlett Packard engineers
 based on this ["spell-casting tome"](https://mitpress.mit.edu/books/structure-and-interpretation-computer-programs).
 
 ## Transcript
 
-Hal Ableson presenting [Lecture 1A, MIT 6.001 Structure and Interpretation](https://youtu.be/2Op3QLzMgSY):
+[Hal Ableson](https://en.wikipedia.org/wiki/Hal_Abelson) presenting [Lecture 1A, MIT 6.001 Structure and Interpretation](https://youtu.be/2Op3QLzMgSY):
 
 I would like to welcome you to this course on Computer Science.
 Actually that is a terrible way to start.
@@ -128,4 +128,4 @@ are the limitation of our own minds.
 So in that sense Computer Science is like an abstract form of engineering.
 It is the kind of engineering where you ignore the constraints that are imposed by reality.
 
-(Lecture continues...)
+
