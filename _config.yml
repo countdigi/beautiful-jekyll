@@ -8,7 +8,7 @@ gems:
 
 # If you are building a simple GitHub user page (username.github.io) then use these settings:
 url: "https://countdigi.github.io"
-baseurl: "/"
+baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
 #url: "https://username.github.io/projectname"
@@ -17,10 +17,10 @@ baseurl: "/"
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: countdigi.github.io
+title: Blog of Kevin Counts
 
 # Short description of your site
-description: Home of Kevin Counts.
+description: Blog of Kevin Counts
 
 # --- Navigation bar options --- #
 
