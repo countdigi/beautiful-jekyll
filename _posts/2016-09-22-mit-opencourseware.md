@@ -81,37 +81,36 @@ And the thing that directs a process is a pattern of rules called a procedure.
 
 A procedure are the spells if you like that controls these magical spirits that are processes.
 Sorcerers using magical languages use ancient Arcadian, Sumerian, or Babylonian but we are going
-to conjure our magical spirits in LISP.
+to conjure our magical spirits in LISP which is a language designed for "casting the spells"
+that are procedures to direct the processes.
 
-Which is a language designed for "casting the spells" that are procedures to direct the processes.
-
-In a few minutes I am going to teach you essentially all of the rules of LISP and you should not find that surprising,
-
+In a few minutes I am going to teach you essentially all of the rules of LISP and you should not find that surprising.
 It is the same as saying its very easy to learn the rules of Chess but of course
 that is very different than saying you understand the implications of these rules and how you use those rules
-to become a master chess player. Well LISP is the same way.
+to become a master chess player.
 
-We are going to state the rules in a few minutes and it will be very easy to see but what is real hard
-is the implication of those rules. How you exploit those rules to become a master programmer.
+LISP is the same way. We are going to state the rules in a few minutes and it will be very easy to see
+but what is real hard is the implication of those rules. How you exploit those rules to become a master programmer.
 And the implications of those rules are going to take us the rest of this subject and beyond.
 
 In Computer Science, we are in the business of formalizing how-to imperative knowledge.
 How to do stuff and the real issues of Computer Science are not telling people how to do square roots.
-The real problems come when we try to build very large systems. Computer programs that are
-thousands of pages long. So big that no one can hold them in all in their heads once.
+The real problems come when we try to build very large systems. Computer programs that are thousands of pages long.
+So big that no one can hold them in all in their heads once.
 And the only way this is possible is that there are
 techniques for controlling the complexity of these large systems and
 theses techniques for controlling complexity are what this course is really about
 and in some sense thats really what Computer Science is about.
-Now that may see like a strange thing to say because after all a lot of people besides
 
-besides computer scientists deal with controlling complexity.
+Now that may see like a strange thing to say because after all a lot of people besides
+computer scientists deal with controlling complexity.
 A large airliner is an extremely complex system and the aeronautical engineers that design this
 are dealing with immense complexity but there is a difference between that kind of complexity
 and what we deal with in Computer Science.
 And that is that Computer Science in some sense is not real.
 
-You see when an engineer is designing a physical system that is made out of real parts, the engineers that worry about that have to address problems of tolerance, approximation, and noise in the system.
+You see when an engineer is designing a physical system that is made out of real parts,
+the engineers that worry about that have to address problems of tolerance, approximation, and noise in the system.
 For example as an electrical engineer I can easily go off and build a one stage amplifier or a two-stage amplifier and I can imagine
 cascading them to build a million stage amplifier but its ridiculous to build such a thing because long
 before the millionth stage the thermal noise in those components way at the beginning
@@ -127,6 +126,7 @@ as opposed to other kinds of engineering where the constraints on what you can b
 are the limitation of our own minds.
 
 So in that sense Computer Science is like an abstract form of engineering.
+
 It is the kind of engineering where you ignore the constraints that are imposed by reality.
 
 
