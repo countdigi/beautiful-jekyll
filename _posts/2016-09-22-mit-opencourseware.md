@@ -102,7 +102,7 @@ techniques for controlling the complexity of these large systems and
 these techniques for controlling complexity are what this course is really about
 and in some sense thats really what Computer Science is about.
 
-Now that may see like a strange thing to say because after all a lot of people besides
+Now that may seem like a strange thing to say because after all a lot of people besides
 computer scientists deal with controlling complexity.
 A large airliner is an extremely complex system and the aeronautical engineers that design this
 are dealing with immense complexity but there is a difference between that kind of complexity
