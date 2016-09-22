@@ -80,7 +80,7 @@ You can think of it like a magical spirit that lives in the computer and does so
 And the thing that directs a process is a pattern of rules called a procedure.
 
 A procedure is the spells if you like that controls these magical spirits that are processes.
-Sorcerers using magical languages use ancient Arcadian, Sumerian, or Babylonian but we are going
+Sorcerers use magical languages using ancient Arcadian, Sumerian, or Babylonian but we are going
 to conjure our magical spirits in LISP which is a language designed for "casting the spells"
 that are procedures to direct the processes.
 
