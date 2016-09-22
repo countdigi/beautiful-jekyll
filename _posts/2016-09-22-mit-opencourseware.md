@@ -99,7 +99,7 @@ The real problems come when we try to build very large systems. Computer program
 So big that no one can hold them in all in their heads once.
 And the only way this is possible is that there are
 techniques for controlling the complexity of these large systems and
-theses techniques for controlling complexity are what this course is really about
+these techniques for controlling complexity are what this course is really about
 and in some sense thats really what Computer Science is about.
 
 Now that may see like a strange thing to say because after all a lot of people besides
