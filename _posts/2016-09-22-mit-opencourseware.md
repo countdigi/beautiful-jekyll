@@ -71,8 +71,7 @@ Let us contrast that with a piece of imperative knowledge.
 
 This in fact also comes from Egypt.
 This is an algorithm from Heron of Alexandria on how to find a square root by successive averaging.
-In order to find a square root of X make a guess of the square root and improve the guess until it good enough
-And you keep improving the guess until its good enough.
+In order to find a square root of X make a guess of the square root and improve the guess (using the formula displayed) until its good enough.
 That is a method, that is how to do something as opposed to declarative knowledge that says what you are looking for.
 That is a process.
 
