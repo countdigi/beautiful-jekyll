@@ -79,7 +79,7 @@ So what is a process in general?  Its kind of hard to say.
 You can think of it like a magical spirit that lives in the computer and does something.
 And the thing that directs a process is a pattern of rules called a procedure.
 
-A procedure are the spells if you like that controls these magical spirits that are processes.
+A procedure is the spells if you like that controls these magical spirits that are processes.
 Sorcerers using magical languages use ancient Arcadian, Sumerian, or Babylonian but we are going
 to conjure our magical spirits in LISP which is a language designed for "casting the spells"
 that are procedures to direct the processes.
