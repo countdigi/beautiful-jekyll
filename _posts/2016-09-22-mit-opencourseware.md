@@ -70,16 +70,11 @@ does not say anything about how you might go out and find one.
 Let us contrast that with a piece of imperative knowledge.
 
 This in fact also comes from Egypt.
-This is an algorithm from Heron of Alexandria on how to find a square root by successive averaging:
-
-- In order to find a square root (x) - set g=(initial guess)
-  - Make a guess of the square root of x and improve the guess until it good enough
-    - Bash pseudo-code: `while true; do g=average($g, $(($x/$g))) || meets_precision($z, 5) && {echo $g; exit;}; done`
-
+This is an algorithm from Heron of Alexandria on how to find a square root by successive averaging.
+In order to find a square root of X make a guess of the square root and improve the guess until it good enough
 And you keep improving the guess until its good enough.
-
 That is a method, that is how to do something as opposed to declarative knowledge that says what you are looking for.
-Thats a process.
+That is a process.
 
 So what is a process in general?  Its kind of hard to say.
 You can think of it like a magical spirit that lives in the computer and does something.
