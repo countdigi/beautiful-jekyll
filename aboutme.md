@@ -1,16 +1,22 @@
 ---
 layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+Kevin Counts is a Systems Engineer and Architect with over 20 years experience in
+the design, development and management of systems environments.  He has worked on a number of
+engineering teams in industries including Higher Education, Cancer Research/Treatment,
+Telecom, Web Marketing, and Bioinformatics.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+He currently works at the Health Informatics Institute at the [University of South Florida](http://www.usf.edu/)
+in Tampa, Florida. He participates on several federally-funded research projects most
+notably the NIH-funded [TEDDY Study](https://teddy.epi.usf.edu/) searching for the cause of Type-1
+Diabetes (T1DM). His team assists a number of researchers and clinicians designing and
+maintaining Bioinformatics environments utilizing High Performance Computing,
+Virtualization, Continuous Delivery, and Big Data.
 
-What else do you need?
+---
 
-### my history
+- Twitter: [@countdigi](https://twitter.com/countdigi)
+- Github:  [countdigi](https://github.com/countdigi)
+- LinkedIn: [Kevin Counts](https://www.linkedin.com/in/kevin-counts-b3b6991)
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
