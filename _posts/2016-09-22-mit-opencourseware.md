@@ -128,10 +128,3 @@ are only the limitation of one's own mind.
 So in that sense Computer Science is like an abstract form of engineering.
 
 It is the kind of engineering where you ignore the constraints that are imposed by reality...
-
----
-
-*... and one may come to realize, the castles you build in reality, come solely from the castles in the sand, the castles within the mind.*
-
-
-
