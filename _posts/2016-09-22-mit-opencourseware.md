@@ -123,7 +123,7 @@ difference between what I can build and what I can imagine because the parts are
 that I know about as much as I want. I know about them as precisely as I'd like so
 as opposed to other kinds of engineering where the constraints on what you can build are the constraints of physical systems,
 the constraints of physics and noise approximation, the constraints imposed in building large software systems
-are the limitation of our own minds.
+are solely the limitation of one's own mind.
 
 So in that sense Computer Science is like an abstract form of engineering.
 
