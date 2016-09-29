@@ -120,9 +120,9 @@ Computer Science deals with idealized components.
 We know as much as we want about these little programs and data pieces that we are fitting together.
 So we do not have to worry about tolerance and that means that in building a large program there is not all that much
 difference between what I can build and what I can imagine because the parts are these abstract entities
-that I know as much as I want. I know about them as precisely as I'd like so
-as opposed to other kinds of engineering where the constraints on what you can build are the constraints of physical systems
-, the constraints of physics and noise approximation, the constraints imposed in building large software systems
+that I know about as much as I want. I know about them as precisely as I'd like so
+as opposed to other kinds of engineering where the constraints on what you can build are the constraints of physical systems,
+the constraints of physics and noise approximation, the constraints imposed in building large software systems
 are the limitation of our own minds.
 
 So in that sense Computer Science is like an abstract form of engineering.
