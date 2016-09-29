@@ -117,7 +117,7 @@ before the millionth stage the thermal noise in those components way at the begi
 is going to get amplified and make the whole thing meaningless.
 
 Computer Science deals with idealized components.
-We know as much as we want about these little program and data pieces that we are fitting together.
+We know as much as we want about these little programs and data pieces that we are fitting together.
 So we do not have to worry about tolerance and that means that in building a large program there is not all that much
 difference between what I can build and what I can imagine because the parts are these abstract entities
 that I know as much as I want. I know about them as precisely as I'd like so
