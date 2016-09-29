@@ -96,7 +96,7 @@ And the implications of those rules are going to take us the rest of this subjec
 In Computer Science, we are in the business of formalizing how-to imperative knowledge.
 How to do stuff and the real issues of Computer Science are not telling people how to do square roots.
 The real problems come when we try to build very large systems. Computer programs that are thousands of pages long.
-So big that no one can hold them in all in their heads once.
+So big that no one can hold them all in their heads once.
 And the only way this is possible is that there are
 techniques for controlling the complexity of these large systems and
 these techniques for controlling complexity are what this course is really about
