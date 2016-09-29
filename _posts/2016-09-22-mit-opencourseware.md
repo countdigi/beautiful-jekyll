@@ -129,7 +129,7 @@ So in that sense Computer Science is like an abstract form of engineering.
 
 It is the kind of engineering where you ignore the constraints that are imposed by reality...
 
-*.. however perhaps you may realize eventually, the castle you build in reality, comes solely from the castles in the sand, castles within the mind.*
+*.. however perhaps you may realize eventually, the castles you build in reality, come solely from the castles in the sand, the castles within the mind.*
 
 
 
