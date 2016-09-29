@@ -131,7 +131,7 @@ It is the kind of engineering where you ignore the constraints that are imposed 
 
 ---
 
-*... however perhaps you may realize eventually, the castles you build in reality, come solely from the castles in the sand, the castles within the mind.*
+*... and one may realize eventually, the castles you build in reality, come solely from the castles in the sand, the castles within the mind.*
 
 
 
