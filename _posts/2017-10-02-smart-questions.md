@@ -16,13 +16,13 @@ from other people with similar interests.
 I wanted to create a short, customized version of this advice tailoring it to something I can
 can quickly share with my colleagues and they can grok in under a minute:
 
-\1. *Use Google or Stack Exchange*. Take a moment to search on the Internet.
+1\. *Use Google or Stack Exchange*. Take a moment to search on the Internet.
    Also learn how to have more control over your google search
    (e.g., [Google Advance Search](https://www.google.com/advanced_search) or
     read this [lifehack.org article](http://www.lifehack.org/articles/technology/20-tips-use-google-search-efficiently.html)).
 
 
-\2. *Be precise and informative about your problem*
+2\. *Be precise and informative about your problem*
 
 - Describe exactly what you did (if a command-line or script error, include full command-line and output)
 - Describe the environment it occurs in:
@@ -36,7 +36,7 @@ can quickly share with my colleagues and they can grok in under a minute:
 - Do the best to anticipate follow-up questions that might be asked
 
 
-\3. *Describe the goal, not the step*. Often, people who need technical help have a high-level goal in mind and get stuck on what
+3\. *Describe the goal, not the step*. Often, people who need technical help have a high-level goal in mind and get stuck on what
    they think is one particular path towards the goal. They come for help with the step, but don't realize that the path is wrong.
 
 - Bad: "How do I get the color-picker on the FooDraw program to take a hexadecimal RGB value?"
@@ -44,7 +44,7 @@ can quickly share with my colleagues and they can grok in under a minute:
          this is by editing each table slot, but I can't get FooDraw's color picker to take a hexadecimal RGB value."
 
 
-\4. *Follow up with a brief note on the solution.*
+4\. *Follow up with a brief note on the solution.*
 
 - If you figure it out yourself, share the solution with whom you previously asked.
 - If you were provided a solution, give feedback especially if the solution works.
