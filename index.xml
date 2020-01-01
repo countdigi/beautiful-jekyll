@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Digicat.org - Personal Blog of Kevin Counts</title>
-    <link>https://digicat.org/</link>
-    <description>Recent content on Digicat.org - Personal Blog of Kevin Counts</description>
+    <title>Kevin Counts</title>
+    <link>https://countdigi.github.io/</link>
+    <description>Recent content on Kevin Counts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://digicat.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://countdigi.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Fuzzy cd for project dirs</title>
-      <link>https://digicat.org/post/2020/01/fuzzy-cd-for-project-dirs/</link>
+      <link>https://countdigi.github.io/post/2020/01/fuzzy-cd-for-project-dirs/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://digicat.org/post/2020/01/fuzzy-cd-for-project-dirs/</guid>
+      <guid>https://countdigi.github.io/post/2020/01/fuzzy-cd-for-project-dirs/</guid>
       <description>When working between projects, I realize that I almost always repeat the same few tasks including:
  Typing cd &amp;lt;path&amp;gt; to enter the project directory Typing git fetch or git pull to check/merge any changes upstream Typing &amp;lt;Ctrl&amp;gt;-b , while in tmux to rename the window to the project name  By incorporating the wonderful command-line fuzzy finder fzf I wrote a small bash function called cdp to automate these steps.</description>
     </item>
     
     <item>
       <title>Fast AI</title>
-      <link>https://digicat.org/post/2019/12/fast-ai/</link>
+      <link>https://countdigi.github.io/post/2019/12/fast-ai/</link>
       <pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://digicat.org/post/2019/12/fast-ai/</guid>
+      <guid>https://countdigi.github.io/post/2019/12/fast-ai/</guid>
       <description>I came across a great episode while listening to Software Engineering Radio the other day while on my morning walk.
 Episode 391 features Jeremy Howard from fast.ai explaining deep learning from concept to implementation.
 I had heard of fast.ai before in an Elixir meetup where I met a gentlemen who designs machine learning systems for monitoring people in hospital beds. The system uses visual detection aided by deep learning to alert staff if a patient has fallen from their bed hopefully getting the patient the help they need more quickly.</description>

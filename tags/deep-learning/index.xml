@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>deep-learning on Digicat.org - Personal Blog of Kevin Counts</title>
-    <link>https://digicat.org/tags/deep-learning/</link>
-    <description>Recent content in deep-learning on Digicat.org - Personal Blog of Kevin Counts</description>
+    <title>deep-learning on Kevin Counts</title>
+    <link>https://countdigi.github.io/tags/deep-learning/</link>
+    <description>Recent content in deep-learning on Kevin Counts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 31 Dec 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://digicat.org/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://countdigi.github.io/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Fast AI</title>
-      <link>https://digicat.org/post/2019/12/fast-ai/</link>
+      <link>https://countdigi.github.io/post/2019/12/fast-ai/</link>
       <pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://digicat.org/post/2019/12/fast-ai/</guid>
+      <guid>https://countdigi.github.io/post/2019/12/fast-ai/</guid>
       <description>I came across a great episode while listening to Software Engineering Radio the other day while on my morning walk.
 Episode 391 features Jeremy Howard from fast.ai explaining deep learning from concept to implementation.
 I had heard of fast.ai before in an Elixir meetup where I met a gentlemen who designs machine learning systems for monitoring people in hospital beds. The system uses visual detection aided by deep learning to alert staff if a patient has fallen from their bed hopefully getting the patient the help they need more quickly.</description>
