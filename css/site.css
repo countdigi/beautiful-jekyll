@@ -1,0 +1,120 @@
+body {
+  font-family: Ruda, sans-serif;
+  display: inline-block;
+  padding: 0.2em 0.3em;
+  font-size: 0.8em;
+  line-height: 1em;
+  color: #555555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc #cccccc #bbbbbb;
+  border-image: none;
+  border-radius: 3px;
+  box-shadow: 0 -1px 0 #bbbbbb inset;
+}
+
+/*
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Roboto Slab", serif;
+  color: #333333;
+}
+*/
+
+
+.topnav {
+  list-style-type: none;
+}
+
+.topnav {
+  background-color: #555;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 21px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+code {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 85%;
+}
+
+/*
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 1.5em;
+}
+*/
+
+/* header and footer areas */
+.menu { padding: 0; }
+.menu li { display: inline-block; }
+.article-meta, .menu a {
+  text-decoration: none;
+  background: #eee;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.menu, .article-meta, footer { text-align: center; }
+
+.title { font-size: 1.1em; }
+
+footer a { text-decoration: none; }
+
+hr {
+  border-style: dashed;
+  color: #ddd;
+}
+
+/*
+pre {
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 5px #eee;
+  padding: 1em;
+  overflow-x: auto;
+}
+*/
+code { background: #f9f9f9; }
+
+pre code { background: none; }
+
+/*
+img, iframe, video { max-width: 100%; }
+main { hyphens: auto; }
+blockquote {
+  background: #f9f9f9;
+  border-left: 5px solid #ccc;
+  padding: 3px 1em 3px;
+}
+
+table {
+  margin: auto;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+table thead th { border-bottom: 1px solid #ddd; }
+th, td { padding: 5px; }
+thead, tfoot, tr:nth-child(even) { background: #eee; }
+
+*/

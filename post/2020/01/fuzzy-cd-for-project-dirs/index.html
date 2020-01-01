@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="/common/favicon.ico">
+    
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/common/site.css">
+    
+    
+    <title>Digicat.org - Personal Blog of Kevin Counts :: Fuzzy cd for project dirs</title>
+    <meta property="og:title"       content="Digicat.org - Personal Blog of Kevin Counts :: Fuzzy cd for project dirs" />
+    <meta property="og:type"        content="article" />
+    
+    <meta property="og:url"         content="https://digicat.org/post/2020/01/fuzzy-cd-for-project-dirs/" />
+    <meta property="og:description" content="" />
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <meta name="twitter:card"       content="summary" />
+    
+    
+  </head>
+  <body>
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item">
+          <a class="nav-link" target="github_countdigi" href="https://github.com/countdigi">GitHub<i class="ml-1 fab fa-github"></i></a>
+        </li>
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" target="twitter_countdigi" href="https://twitter.com/@countdigi">Twitter<i class="ml-1 fab fa-twitter"></i></a>
+        </li>
+        
+      </ul>
+    </header>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="https://digicat.org">Digicat.org - Personal Blog of Kevin Counts</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_nav" aria-controls="navbar_nav" aria-expand="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar_nav">
+        
+        <ul class="navbar-nav mr-auto">
+          
+          
+          
+          
+          
+        </ul>
+        
+        <div class="navbar-nav ml-auto">
+          <span class="navbar-text mr-1">share via</span>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="https://twitter.com/share?url=https%3a%2f%2fdigicat.org%2fpost%2f2020%2f01%2ffuzzy-cd-for-project-dirs%2f&text=Fuzzy%20cd%20for%20project%20dirs" target="_blank"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fdigicat.org%2fpost%2f2020%2f01%2ffuzzy-cd-for-project-dirs%2f" target="_blank"><i class="fab fa-facebook"></i></a></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/shareArticle?url=https%3a%2f%2fdigicat.org%2fpost%2f2020%2f01%2ffuzzy-cd-for-project-dirs%2f&title=Fuzzy%20cd%20for%20project%20dirs" target="_blank"><i class="fab fa-linkedin"></i></a></a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
+    <main role="main" class="container-fluid col-lg-10 offset-lg-1">
+
+<br/>
+<div class="row">
+  <div class="col-lg-12">
+    <article>
+      <h1>Fuzzy cd for project dirs</h1>
+      <span style="color: grey">By Kevin Counts on 2020-01-01</span>
+      
+        
+        <a class="badge badge-pill badge-secondary" href="/tags/bash/">bash</a>
+        
+      
+      <p/>
+      <p>When working between projects, I realize that I almost always repeat the same few tasks including:</p>
+<ul>
+<li>Typing <code>cd &lt;path&gt;</code> to enter the project directory</li>
+<li>Typing <code>git fetch</code> or <code>git pull</code> to check/merge any changes upstream</li>
+<li>Typing <code>&lt;Ctrl&gt;-b ,</code> while in tmux to rename the window to the project name</li>
+</ul>
+<p>By incorporating the wonderful command-line fuzzy finder <a href="https://github.com/junegunn/fzf">fzf</a>
+I wrote a small bash function called <code>cdp</code> to automate these steps.</p>
+<p>The function is written for two levels under a common directory (e.g. <code>~/dev</code>) where
+the first level is the github organization name and the second level is the repository.</p>
+<p>From the command line, typing <code>cdp</code> will bring up a fuzzy-finder window with all organzations
+and projects under your <code>~/dev</code> directory. You type characters until finally selecting
+the project to cd into.  You can also give <code>cdp</code> a string as an argument to limit the paths listed at the beginning.</p>
+<p>If your project is a git repo it will then run <code>git fetch</code> as well as
+displaying verbose branch info compared to the upstream and the status of your working directory.</p>
+<p>The latter half of the function only runs if you are in a tmux session. You can customize
+the <code>rename_parent</code> and <code>rename_proj</code> bash arrays or leave as empty <code>()</code>. For example
+in the code below <code>usf-hii/hii</code> will substitute the organization <code>usf-hii</code> with the shorter
+string <code>hii</code> which will reduce the characters for the tmux window name.</p>
+<hr>
+<p>Example:</p>
+<pre><code>$ cdp snp
+</code></pre><p>Brings up a fuzzy finder menu:</p>
+<pre><code>&gt; ./usf-hii/snptk
+&gt; ./usf-hii/snp-util
+2/18
+</code></pre><p>Adding the character <code>t</code> and hitting enter takes us to the <code>usf-hii/snptk</code> project,
+fetches changes, shows us verbose branch info, short git status and sets the tmux window
+name to <code>hii/snptk</code>.</p>
+<p>In this example we have 2 commits ready to be pushed and one file with changes
+not yet staged.</p>
+<pre><code>&gt; snptk&gt; git fetch --quiet (git@github.com:usf-hii/snptk.git)
+* master 66cc97c [ahead 2] Fix snpid-from-coord output to delete file
+ M tests/test_helper.py
+
+countskm@jabba:~/dev/usf-hii/snptk (master * u+2)
+$ # do your work now...
+</code></pre><hr>
+<p>Here is the function if you would like to add it to your <code>~/.bashrc</code>:</p>
+<div class="highlight"><div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cdp<span style="color:#666">(</span><span style="color:#666">)</span> <span style="color:#666">{</span>
+    <span style="color:#007020">local</span> <span style="color:#bb60d5">levels</span><span style="color:#666">=</span><span style="color:#40a070">2</span>
+    <span style="color:#007020">local</span> <span style="color:#bb60d5">project_dir</span><span style="color:#666">=</span>~/dev
+
+    <span style="color:#007020">local</span> <span style="color:#bb60d5">target_dir</span><span style="color:#666">=</span><span style="color:#007020;font-weight:bold">$(</span>
+      <span style="color:#007020">cd</span> <span style="color:#70a0d0;font-style:italic">${</span><span style="color:#bb60d5">project_dir</span><span style="color:#70a0d0;font-style:italic">}</span>
+      find . -maxdepth <span style="color:#70a0d0;font-style:italic">${</span><span style="color:#bb60d5">levels</span><span style="color:#70a0d0;font-style:italic">}</span> -mindepth <span style="color:#70a0d0;font-style:italic">${</span><span style="color:#bb60d5">levels</span><span style="color:#70a0d0;font-style:italic">}</span> -type d | fzf --query <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$1</span><span style="color:#4070a0">&#34;</span>
+    <span style="color:#007020;font-weight:bold">)</span>
+
+    <span style="color:#007020">cd</span> <span style="color:#4070a0">&#34;</span><span style="color:#70a0d0;font-style:italic">${</span><span style="color:#bb60d5">project_dir</span><span style="color:#70a0d0;font-style:italic">}</span><span style="color:#4070a0">/</span><span style="color:#70a0d0;font-style:italic">${</span><span style="color:#bb60d5">target_dir</span><span style="color:#70a0d0;font-style:italic">}</span><span style="color:#4070a0">&#34;</span>
+
+    <span style="color:#007020;font-weight:bold">if</span> <span style="color:#666">[</span><span style="color:#666">[</span> -d .git <span style="color:#666">]</span><span style="color:#666">]</span>; <span style="color:#007020;font-weight:bold">then</span>
+        <span style="color:#007020">printf</span> <span style="color:#4070a0">&#39;&gt; git fetch --quiet (%s)\n&#39;</span> <span style="color:#4070a0">&#34;</span><span style="color:#007020;font-weight:bold">$(</span>git config --get remote.origin.url<span style="color:#007020;font-weight:bold">)</span><span style="color:#4070a0">&#34;</span>;
+        git fetch --quiet;
+        git branch --verbose;
+        git status --short;
+    <span style="color:#007020;font-weight:bold">fi</span>
+
+    <span style="color:#007020;font-weight:bold">if</span> <span style="color:#666">[</span><span style="color:#666">[</span> -n <span style="color:#70a0d0;font-style:italic">${</span><span style="color:#bb60d5">TMUX</span><span style="color:#70a0d0;font-style:italic">}</span> <span style="color:#666">]</span><span style="color:#666">]</span>; <span style="color:#007020;font-weight:bold">then</span>
+      <span style="color:#007020">local</span> <span style="color:#bb60d5">rename_parent</span><span style="color:#666">=</span><span style="color:#666">(</span>usf-hii/hii countdigi/digi<span style="color:#666">)</span>
+      <span style="color:#007020">local</span> <span style="color:#bb60d5">rename_proj</span><span style="color:#666">=</span><span style="color:#666">(</span>fac-parikhh/fp<span style="color:#666">)</span>
+      <span style="color:#007020">local</span> rename
+
+      <span style="color:#007020">local</span> <span style="color:#bb60d5">parent_dir</span><span style="color:#666">=</span><span style="color:#007020;font-weight:bold">$(</span>basename <span style="color:#4070a0">&#34;</span><span style="color:#007020;font-weight:bold">$(</span>dirname <span style="color:#4070a0">&#34;</span><span style="color:#007020;font-weight:bold">$(</span><span style="color:#007020">pwd</span><span style="color:#007020;font-weight:bold">)</span><span style="color:#4070a0">&#34;</span><span style="color:#007020;font-weight:bold">)</span><span style="color:#4070a0">&#34;</span><span style="color:#007020;font-weight:bold">)</span>
+      <span style="color:#007020">local</span> <span style="color:#bb60d5">proj_dir</span><span style="color:#666">=</span><span style="color:#007020;font-weight:bold">$(</span>basename <span style="color:#4070a0">&#34;</span><span style="color:#007020;font-weight:bold">$(</span><span style="color:#007020">pwd</span><span style="color:#007020;font-weight:bold">)</span><span style="color:#4070a0">&#34;</span><span style="color:#007020;font-weight:bold">)</span>
+
+      <span style="color:#007020;font-weight:bold">for</span> rename in <span style="color:#70a0d0;font-style:italic">${</span><span style="color:#bb60d5">rename_parent</span>[@]<span style="color:#70a0d0;font-style:italic">}</span>; <span style="color:#007020;font-weight:bold">do</span>
+        <span style="color:#bb60d5">parent_dir</span><span style="color:#666">=</span><span style="color:#007020;font-weight:bold">$(</span><span style="color:#007020">echo</span> <span style="color:#70a0d0;font-style:italic">${</span><span style="color:#bb60d5">parent_dir</span><span style="color:#70a0d0;font-style:italic">}</span> | sed <span style="color:#4070a0">&#34;</span><span style="color:#4070a0">s/</span><span style="color:#70a0d0;font-style:italic">${</span><span style="color:#bb60d5">rename</span><span style="color:#70a0d0;font-style:italic">}</span><span style="color:#4070a0">/</span><span style="color:#4070a0">&#34;</span><span style="color:#007020;font-weight:bold">)</span>
+      <span style="color:#007020;font-weight:bold">done</span>
+
+      <span style="color:#007020;font-weight:bold">for</span> rename in <span style="color:#70a0d0;font-style:italic">${</span><span style="color:#bb60d5">rename_proj</span>[@]<span style="color:#70a0d0;font-style:italic">}</span>; <span style="color:#007020;font-weight:bold">do</span>
+        <span style="color:#bb60d5">proj_dir</span><span style="color:#666">=</span><span style="color:#007020;font-weight:bold">$(</span><span style="color:#007020">echo</span> <span style="color:#70a0d0;font-style:italic">${</span><span style="color:#bb60d5">proj_dir</span><span style="color:#70a0d0;font-style:italic">}</span> | sed <span style="color:#4070a0">&#34;</span><span style="color:#4070a0">s/</span><span style="color:#70a0d0;font-style:italic">${</span><span style="color:#bb60d5">rename</span><span style="color:#70a0d0;font-style:italic">}</span><span style="color:#4070a0">/</span><span style="color:#4070a0">&#34;</span><span style="color:#007020;font-weight:bold">)</span>
+      <span style="color:#007020;font-weight:bold">done</span>
+
+      tmux rename-window <span style="color:#4070a0">&#34;</span><span style="color:#70a0d0;font-style:italic">${</span><span style="color:#bb60d5">parent_dir</span><span style="color:#70a0d0;font-style:italic">}</span><span style="color:#4070a0">/</span><span style="color:#70a0d0;font-style:italic">${</span><span style="color:#bb60d5">proj_dir</span><span style="color:#70a0d0;font-style:italic">}</span><span style="color:#4070a0">&#34;</span>
+    <span style="color:#007020;font-weight:bold">fi</span>
+<span style="color:#666">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+    </article>
+  </div>
+  
+</div>
+      <div class="row">
+        <footer class="col-lg-12">
+          <hr/>
+          <span>&copy; Digicat.org - Personal Blog of Kevin Counts</span>
+          <span>&nbsp;&middot;&nbsp;</span>
+          <i class="fas fa-bolt"></i>
+          <span>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a></span>
+        </footer>
+      </div>
+    </div>
+    </main>
+    
+      
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+    </script>
+  </body>
+</html>
+
